@@ -36,15 +36,15 @@ Preparado para futura conexión a base de datos MySQL y envío de correos electr
 WEB_PORTOBELLO/
 │
 ├── FRONTEND/
-│   ├── HTML/       # Archivos HTML de cada página
-│   ├── CSS/        # Estilos CSS personalizados
-│   ├── JS/         # Archivos JavaScript
-│   └── IMG/        # Imágenes y multimedia del sitio
+│   ├── HTML/       
+│   ├── CSS/       
+│   ├── JS/         
+│   └── IMG/        
 │
-├── BACKEND/        # Carpeta para futuros archivos FastAPI
+├── BACKEND/        
 │   └── main.py
 │
-└── README.md       # Este archivo
+└── README.md       
 
 ## ⚡Tecnologías utilizadas
 
@@ -59,5 +59,13 @@ Control de versiones: Git (opcional subir a GitHub)
 Despliegue: AWS, Render u otros servidores web
 
 ## 🚀  Cómo ejecutar
-
+1. Clonar repositorio:
+   git clone <URL-del -repositorio>
+2. Abrir los archivos HTML directamente en un navegador.
+3. Para funcionalidades dinámicas (formulario, base de datos):
+   pip install fastapi uvicorn
+   uvicorn main:app --reload
+4.  Acceder a http://localhost:8000             
+   
+   
 
