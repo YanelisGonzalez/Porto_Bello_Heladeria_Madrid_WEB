@@ -1,5 +1,5 @@
-# 🏖️ Porto_Bello_Heladeria_Madrid_WEB
-Web de Heladería Porto Bello Madrid
+🏖️# Porto_Bello_Heladeria_Madrid_WEB
+Web de Heladería Porto Bello Madrid.
 Este proyecto corresponde a la página web oficial de Porto Bello Heladería, ubicada en Madrid. La web está diseñada para mostrar los productos, servicios, información de contacto y horarios de la heladería, con un diseño responsive adaptado a dispositivos móviles y de escritorio.
 
 El proyecto está desarrollado con HTML, CSS y JavaScript en el frontend y preparado para integrarse con un backend en FastAPI para funcionalidades dinámicas (como formularios de contacto o gestión de base de datos).
