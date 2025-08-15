@@ -60,7 +60,7 @@ Despliegue: AWS, Render u otros servidores web
 
 ## 🚀  Cómo ejecutar
 1. Clonar repositorio:
-   git clone <URL-del -repositorio>
+   git clone <https://github.com/YanelisGonzalez/Porto_Bello_Heladeria_Madrid_WEB.git>
 2. Abrir los archivos HTML directamente en un navegador.
 3. Para funcionalidades dinámicas (formulario, base de datos):
    pip install fastapi uvicorn
