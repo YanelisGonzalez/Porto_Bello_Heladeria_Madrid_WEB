@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LOCALIZACIÓN/HORARIOS</title>
+    <link rel="stylesheet" href="/static/CSS/HORARIOS.CSS">
+</head>
+<body id="Inicio">
+    <header id="Cabecera">
+        <figure class="logo">
+            <img src="/static/IMG/Logotipo portobello.png" width="150px" height="75px">
+        </figure>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="Container">
+            <ul id="Menuprincipal">
+                <li><a href="/CABECERA">Inicio</a></li>
+                <li><a href="/NOSOTROS">Sobre Nosotros</a></li>
+                <li><a>Helados</a>
+                    <ul>
+                        <li>Sin Gluten</li>
+                        <li>Sin Lactosa</li>
+                        <li>Sin Azucares</li>
+                        <li>Veganos</li>
+                    </ul>
+                </li>
+                <li><a href="/PRODUCTOS">Otros Productos</a>
+                     <ul>
+                        <li>Crepes</li>
+                        <li>Gofres</li>
+                        <li>Tortitas</li>
+                        <li>Tartas y Postres</li>
+                        <li>Batidos</li>
+                        <li>Smoothies</li>
+                        <li>Horchata Natural</li>
+                        <li>Granizados</li>
+                        <li>Cocteles</li>
+                        <li>Refrescos</li>
+                        <li>Cervezas</li>
+                        <li>Chocolate caliente a la taza</li>
+                        <li>Cafés, Tés e Infusiones</li>
+                    </ul>
+                </li>
+                <li><a href="/HORARIOS">Ubicación</a></li>
+                <li><a href="/DOMICILIO">Pide a Domicilio</a></li>
+                <li><a href="/CONTACTAR">Contactar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <figure class="galeria">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.227320066035!2d-3.7165517246089275!3d40.40381467144168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227ee5217e4b1%3A0x84a4443a05af2447!2sHeladeria%20PORTO%20BELLO!5e0!3m2!1ses!2ses!4v1721829297363!5m2!1ses!2ses" width="1000" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+    <!--galería de imagenes animadas-->
+
+    <div class="informacion">
+        <div>
+            <h4>Dirección:</h4>
+            <br>
+            <p>Paseo de Juan Antonio Vallejo-Nájera Botas, 46<br>
+        Pasillo Verde<br>
+       28005, Madrid<br>
+            </p> 
+        </div>     
+        <br>
+        <br>
+        <nav class="contacto">
+            <h4>Contacto:</h4>
+            <br>
+            <a target="_blank" href="tel:+34662631849">(+34)662 631 849</a>
+            <br>
+            <a target="_blank" href="tel:+34913545138">(+34)913 545 138</a>
+            <br>
+            <br>
+            <p>Ubicación:</p>
+            <br>
+            <a target="_blank" href="https://maps.app.goo.gl/bhTG2tBTzMjWPmyq5">Ir a Mapa</a>
+        </nav>
+        <br>
+        <div class="consulta">
+            <p>El horario de nuestra tienda depende de la temporada. Consultar horarios
+            <a target="_blank" href="https://g.co/kgs/NP3ueT7">aquí</a>.
+            </p>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <section id="inicio">
+    <a class="inicio" href="#Inicio">Ir a Inicio</a>
+    <br>
+    <br>
+    <br> 
+    </section>
+    <footer>
+        <div>
+            <section class="pie">
+                <address>Madrid, España</address>
+                <small>&COPY; Derechos Reservados 2019</small>
+            </section>
+            <section class="pie1">   
+                <p>Coctacto:</p>
+                <a href="tel:+34662631849">Teléfono</a>
+                <a href="mailto:portobellomadrid@yaraspain.com">Porto Bello Madrid</a>
+            </section>
+            <section class="pie2">
+                <br>
+                <br>
+                <p>Síguenos en redes:</p>
+                <br>
+                <img src="/static/IMG/386622_facebook_icon.png" width="20px" height="20px">
+                <a target="_blank" href="https://www.facebook.com/portobellomadrid">Facebook</a>
+                <img src="/static/IMG/6929237_instagram_icon.png" width="20px" height="20px">
+                <a target="_blank" href="https://www.instagram.com/heladeria_porto_bello_madrid/">Instragram</a>
+            </section>
+        </div>
+
+    </footer>
+    <script>
+       function toggleMenu() {
+            const menu = document.getElementById('Container');
+            menu.classList.toggle('active');
+        }
+    </script>  
+</body>
+</html>

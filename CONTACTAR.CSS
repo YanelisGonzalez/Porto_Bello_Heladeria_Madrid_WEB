@@ -1,0 +1,365 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+#Cabecera {
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: antiquewhite;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.logo > img {
+    padding: 0;
+    margin-right: 40px;
+    width: 150px;
+    height: 75px;
+}
+
+#Container {
+    flex-grow: 1;
+    background-color: antiquewhite;
+}
+
+#menuprincipal {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+   
+#menuprincipal > li {
+    position: relative;
+    height: 40px;
+    padding: 10px 15px;
+    margin-right: 5px;
+    color: deeppink;
+}
+
+#menuprincipal > li:hover {
+    background-color: gray;
+    transition: all 3.0ms ease;
+    cursor: pointer;
+}
+
+#menuprincipal li > ul {
+    position: absolute;
+    display: none ;
+    padding-top: 25px;
+    left: 0px;
+}
+
+#Container li:hover ul {
+    display: block;
+}
+
+#menuprincipal li > ul > li {
+    padding-top: 8px;
+    font-size: 17px;
+    padding-left: 10px;
+    background-color: antiquewhite;
+}
+
+#menuprincipal li > ul > li:hover {
+    color: whitesmoke;
+    background-color: gray;
+    transition: all 3ms ease;
+    cursor: pointer;
+}
+
+#menuprincipal li a {
+    color: deeppink;
+    text-decoration: none;
+    white-space: nowrap; /* evita saltos de línea */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#menuprincipal a:hover {
+    color: whitesmoke;
+    transition: all 3ms ease;
+    cursor: pointer;
+}
+    
+/*hasta aquí se desarrolla el header*/
+/*ahora se desarrolla el cuerpo del documento*/
+
+.formulario {
+    background-color: antiquewhite;
+    overflow: auto; 
+    padding-top: 200px;  
+    font-size: 15px;
+    color: deeppink;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+.formulario img {
+    float: left;
+    margin: 0px 10px;
+    padding-right: 30px;
+    width: 580px;
+    height: 580px;
+}
+
+.inc {
+    background-color: antiquewhite;
+    padding-bottom: 20px;
+}
+
+.inc a {
+    padding-left: 650px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: deeppink;
+}
+
+.inc a:hover {
+    color: darkslategray;
+    transition: all 3ms ease;
+    cursor: pointer;
+}
+
+input {
+    border:solid 5px;
+    border-color: bisque;
+    border-width: 3px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: darkslategray;
+}
+
+select {
+    border:solid 5px;
+    border-color: bisque;
+    border-width: 3px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: darkslategray;
+}
+
+.Comentario textarea {
+    border:solid 5px;
+    border-color: bisque;
+    border-width: 3px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: darkslategray;
+}
+
+button {
+    border:solid 5px;
+    border-color: bisque;
+    border-width: 3px;
+    border-radius: 20px;
+    background-color: lightpink;
+    font-family: Arial, Helvetica, sans-serif;
+    color: deeppink;
+    padding: 15px 25px;
+}
+
+button:hover {
+    background-color: darkslategray;
+    color: whitesmoke;
+    transition: all 3ms ease;
+    cursor: pointer;
+}
+
+footer {
+    width: 96%;
+    padding: 2%;
+    background-color: gray;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer div {
+    width: 960px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.pie {
+    float: left;
+    width: 320px;
+}
+
+.pie1 {
+    float: left;
+    width: 320px;
+}
+
+.pie1 a:hover {
+    color: darkslategray ;
+    transition: all 3ms ease;
+    cursor: pointer;
+}
+
+.pie2 a:hover {
+    color: darkslategray ;
+    transition: all 3ms ease;
+    cursor: pointer;
+}
+
+/* Ocultar el botón hamburguesa en pantallas grandes */
+.menu-toggle {
+  display: none;
+}
+
+
+/*hacer responsive la página*/        
+@media (max-width: 768px) {
+  #Cabecera {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+
+
+  .menu-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    color: deeppink;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  #menuprincipal {
+    flex-direction: column;
+    align-items: center;
+    display: none; /* se oculta hasta hacer toggle */
+    gap: 10px;
+  }
+
+  #menuprincipal li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .formulario {
+    padding-top: 180px;
+    text-align: center;
+  }
+
+  .formulario img {
+    float: none;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .Comentario textarea,
+  input,
+  select {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .inc a {
+    padding-left: 0;
+    display: block;
+    text-align: center;
+  }
+
+  footer div {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .pie,
+  .pie1,
+  .pie2 {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+/* Modal fondo */
+#modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Contenedor del modal */
+#modal-content {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+/* Título */
+#modal-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Botón cerrar */
+#modal-content button {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+#modal-content button:hover {
+    background: #218838;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+
+    
+
+
+

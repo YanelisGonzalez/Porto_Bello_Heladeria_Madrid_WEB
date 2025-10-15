@@ -1,0 +1,417 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+main {
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    color: deeppink;
+    
+    padding-top: 120px;/* Ajusta según la altura de tu header, y debe ser igual o mayor que la altura de la cabecera(height) */
+}
+
+#Cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    
+    height: 100px; /* o el valor que prefieras */
+}
+
+    
+   
+
+.logo {
+    flex-shrink: 0; /* evita que el logo se encoja */
+}
+
+.logo > img {
+    padding: 0;
+    margin-right: 40px;
+    width: 150px;
+    height: 75px;
+    
+}
+
+#Container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 40px; /* espacio entre logo y menú */
+    background-color: antiquewhite;
+   
+}
+
+#menuprincipal {
+    display: flex;
+    flex-wrap: wrap; /* permite que se acomoden en pantallas más pequeñas */
+    /*flex-wrap: nowrap;*/
+    gap: 20px;
+}
+
+ #menuprincipal li a {
+    color: deeppink;
+    text-decoration: none;
+    white-space: nowrap; /* evita saltos de línea */
+    font-size: 16px;
+    font-weight: bold;  
+ }
+
+ #menuprincipal a:hover {
+    color: whitesmoke;
+    transition: all 3.0ms ease;
+    cursor: pointer;
+ }
+
+ #menuprincipal > li {
+    position: relative;
+    color: deeppink;
+    padding: 10px 15px;
+    margin-right: 5px;
+    height: 40px;
+    
+ }
+
+ #menuprincipal > li:first-child > a {
+    background-image: url(../IMG/);
+
+ }
+
+ #menuprincipal > li:hover {
+    background-color: gray;
+    transition: 3.0ms;
+    cursor: pointer;
+ }
+
+ #menuprincipal li > ul {
+    position: absolute;
+    display: none;
+    padding-top: 25px;
+    left: 0px;
+ }
+
+ #Container li:hover ul {
+    display: block;
+ }
+ 
+ #menuprincipal li > ul > li {
+    font-size: 17px;
+    padding-top: 8px;
+    padding-left: 10px;
+    background-color: antiquewhite;
+ }
+
+ #menuprincipal li> ul > li:hover {
+    color: whitesmoke;
+    background-color: gray;
+    transition: all 3ms ease;
+    cursor: pointer;
+ }
+ 
+.galeria {
+    padding-left: 180px;
+    padding-top: 100px;
+}
+
+.galeria img {
+    background-color: gray;
+    box-shadow: gray 10px 10px 10px 20px;
+}
+
+.intro {
+    padding-top: 200px;
+}
+
+.intro p {
+    width: 960px;
+    margin-left: 200px;
+    border: 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: lightpink;
+    
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px; /* ajusta según necesites */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.hero-texto {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4); /* fondo negro semitransparente */
+  color: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-texto h2 {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Efecto de entrada sutil */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.boton-glovo {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: deeppink; /* Color Glovo */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton-glovo:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+
+footer {
+    width: 96%;
+    padding: 2%;
+    background-color: gray;
+}
+
+footer > div {
+    width: 960px;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+#boton-inicio {
+    background-color: antiquewhite;
+}
+
+.inicio {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: deeppink;
+    text-decoration: none;
+    padding-left: 650px;
+    background-color: antiquewhite;
+    
+}
+
+.inicio:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.pie {
+    float: left;
+    width: 270px;
+    padding: 25px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.pie1 {
+    float: left;
+    width: 270px;
+    padding: 25px ;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.pie1 a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 8px;
+    text-decoration: none;
+}
+
+.pie1 a:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.pie2 a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 8px;
+    text-decoration: none;
+}
+
+.pie2 a:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.pie2 p {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.carrusel-js {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.slides.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/*hacer responsive la página*/
+
+/* Ocultar botón hamburguesa por defecto */
+.menu-toggle { 
+  display: none;
+}
+
+/* Mostrar en pantallas pequeñas */
+@media (max-width: 768px) {
+  #Cabecera {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .logo {
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    color: deeppink;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  #Container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+
+  #Container.active {
+    display: flex;
+  }
+
+  #menuprincipal {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #menuprincipal li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+
+  footer div {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .pie,
+  .pie1,
+  .pie2 {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    

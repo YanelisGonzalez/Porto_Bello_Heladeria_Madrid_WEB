@@ -1,0 +1,361 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+main {
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    color: deeppink;
+}
+
+#Cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: antiquewhite;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.logo > img {
+    padding: 0;
+    margin-right: 40px;
+    width: 150px;
+    height: 75px;
+    
+}
+
+#Container {
+    flex-grow: 1;
+    background-color: antiquewhite;
+    
+}
+
+#menuprincipal {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+ #menuprincipal li a {
+    color: deeppink;
+    text-decoration: none;
+    white-space: nowrap; /* evita saltos de línea */
+    font-size: 16px;
+    font-weight: bold;  
+ }
+
+ #menuprincipal a:hover {
+    color: whitesmoke;
+    transition: all 3.0ms ease;
+    cursor: pointer;
+ }
+
+ #menuprincipal > li {
+    position: relative;
+    color: deeppink;
+    padding: 10px 15px;
+    margin-right: 5px;
+    height: 40px;
+    
+ }
+
+ #menuprincipal > li:first-child > a {
+    background-image: url(../IMG/);
+
+ }
+
+ #menuprincipal > li:hover {
+    background-color: gray;
+    transition: 3.0ms;
+    cursor: pointer;
+ }
+
+ #menuprincipal li > ul {
+    position: absolute;
+    display: none;
+    padding-top: 25px;
+    left: 0px;
+ }
+
+ #Container li:hover ul {
+    display: block;
+ }
+ 
+ #menuprincipal li > ul > li {
+    font-size: 17px;
+    padding-top: 8px;
+    padding-left: 10px;
+    background-color: antiquewhite;
+ }
+
+ #menuprincipal li> ul > li:hover {
+    color: whitesmoke;
+    background-color: gray;
+    transition: all 3ms ease;
+    cursor: pointer;
+ }
+ 
+.galeria {
+    padding-left: 180px;
+    padding-top: 100px;
+}
+
+.galeria img {
+    background-color: gray;
+    box-shadow: gray 10px 10px 10px 20px;
+}
+
+.intro {
+    padding-top: 200px;
+}
+
+.intro p {
+    width: 960px;
+    margin-left: 200px;
+    border: 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: lightpink;
+    
+}
+
+.video {
+    display: flex;
+    justify-content: center; /*centrar horizontalmente*/
+    align-items: center;
+    margin: 20px 0; /* opcional, para separar el video */
+    width: 100%;
+}
+
+/* Para que el video sea responsive */
+.video-container video {
+  width: 100%;
+  max-width: 640px; /* máximo ancho original */
+  height: auto;     /* ajusta la altura automáticamente para mantener la proporción */
+  display: block; /* para que respete el centrado */
+}
+
+footer {
+    width: 96%;
+    padding: 2%;
+    background-color: gray;
+}
+
+footer > div {
+    width: 960px;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+
+
+#inicio {
+    background-color: antiquewhite;
+}
+
+
+.inicio {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: deeppink;
+    text-decoration: none;
+    padding-left: 650px;
+    background-color: antiquewhite;
+}
+
+
+.inicio:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.pie {
+    float: left;
+    width: 270px;
+    padding: 25px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.pie1 {
+    float: left;
+    width: 270px;
+    padding: 25px ;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.pie1 a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 8px;
+    text-decoration: none;
+}
+
+.pie1 a:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.pie2 a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 8px;
+    text-decoration: none;
+}
+
+.pie2 a:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.pie2 p {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+/*hacer responsive la pagina*/
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: deeppink;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    /* CABECERA */
+    #Cabecera {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+        position: relative;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* MENÚ PRINCIPAL DESPLEGABLE */
+    #menuprincipal {
+        display: none;
+        flex-direction: column;
+        background-color: antiquewhite;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #menuprincipal.show {
+        display: flex;
+    }
+
+    #menuprincipal li {
+        padding: 10px 20px;
+    }
+
+    /* GALERÍA DE IMÁGENES */
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+         width: 100%;
+    }
+
+    .galeria img {
+     width: 100%;
+     max-width: 400px;
+     height: auto;
+     margin-bottom: 15px;
+     object-fit: cover;
+     display: block; 
+    }
+
+    /* INTRO */
+    .intro p {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* VIDEO */
+    #video {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ENLACE INICIO */
+    .inicio {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .pie, .pie1, .pie2 {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+    
+    
+
+
+

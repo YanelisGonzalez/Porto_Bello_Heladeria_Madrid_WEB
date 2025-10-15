@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>CONTACTAR</title>
+    <link rel="stylesheet" href="/static/CSS/CONTACTAR.CSS">
+</head>
+<body id="Inicio">
+    <header id="Cabecera">
+        <figure class="logo">
+            <img src="/static/IMG/Logotipo portobello.png" width="150px" height="75px">
+        </figure>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="Container">
+            <div>
+                <ul id="menuprincipal">
+                    <li><a href="/CABECERA">Inicio</a></li>
+                    <li><a href="/NOSOTROS">Sobre Nosotros</a></li>
+                    <li><a href="#">Helados</a>
+                        <ul>
+                            <li>Sin Gluten</li>
+                            <li>Sin Lactosa</li>
+                            <li>Sin Azucares</li>
+                            <li>Veganos</li>
+                        </ul>
+                    </li>
+                    <li><a href="/PRODUCTOS">Otros Productos</a>
+                        <ul>
+                            <li>Crepes</li>
+                            <li>Gofres</li>
+                            <li>Tortitas</li>
+                            <li>Tartas y Postres</li>   
+                            <li>Batidos</li>
+                            <li>Smoothies</li>
+                            <li>Horchata Natural</li>
+                            <li>Granizados</li>
+                            <li>Cocteles</li>         
+                            <li>Refrescos</li>
+                            <li>Cervezas</li>
+                            <li>Chocolate caliente a la taza</li>
+                            <li>Cafés, Tés e Infusiones</li>
+                        </ul>
+                    </li>
+                    <li><a href="/HORARIOS">Ubicación</a></li>
+                    <li><a href="/DOMICILIO">Pide a Domicilio</a></li>
+                    <li><a href="/CONTACTAR">Contactar</a></li>   
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="formulario">  
+        <main>
+            <figure class="galeria">
+                <img src="/static/IMG/istockphoto-185256427-612x612.jpg" width="580px" height="580px">
+            </figure>
+            <section class="container">
+                
+                
+             <h4>INFORMACIÓN DE CONTACTO:</h4>
+             
+                <form id="formulario-contacto"   action="http://localhost:8000/enviar-formulario" method="POST">
+                    <label for="nombre_completo">Nombre Completo:</label>
+                    <input id="nombre_completo" name="nombre_completo" type="text" placeholder="María Carla" required>
+                    <label for="apellidos">Apellidos:</label>
+                    <input id="apellidos" name="apellidos" type="text" placeholder="González Fuentes" required>
+                    <br>
+                    <br>
+                    <label for="telefono">Teléfono:</label>
+                    <input id="telefono" name="telefono" type="tel"  maxlength="9" placeholder="874876176" required>
+                    <label for="correo_electronico">Correo Electrónico:</label>
+                    <input id="correo_electronico" name="correo_electronico" type="email" placeholder="yara@yara..." required>
+                    
+                    
+                    <!--investigar como utilizar css en esta sección-->
+                    <label for="pais">País:</label>
+                    <select id="pais" name="pais">
+                        <option value="España">España</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Reino Unido">Reino Unido</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <!--buscar biblioteca de paises-->
+                    <label for="ciudad">Ciudad:</label>
+                    <select id="ciudad"  name="ciudad">
+                        <option value="Madrid">Madrid</option>
+                        <option value="Roma">Roma</option>
+                        <option value="La Habana">La Habana</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Río de Janeiro">Río de Janeiro</option> 
+                        <option value="París">París</option>
+                        <option value="Londres">Londres</option>
+                    </select>
+            
+                    <!--buscar biblioteca de ciudades-->
+                    <label for="CP">Código Postal:</label>
+                    <input id="CP" name="CP" type="number" placeholder="28005" maxlength="7" min="0"  >
+                    
+                    
+                    <div class="Comentario">
+                        <h4>Heladerías Favoritas:</h4>
+                        <textarea id="heladerias_favoritas"   name="heladerias_favoritas"></textarea>
+                        
+                        
+                        <h4>Comentario:</h4>
+                        <textarea id="comentario" name="comentario" cols="50" rows="5" maxlength="100" placeholder="Comentario">Ingrese comentario</textarea>
+                    </div>
+                    
+                    
+                    <button type="reset">Restablecer</button>
+                    <button type="submit" value="enviar datos">Enviar</button>
+                    
+                </form>
+                <div id="modal">
+                    <div id="modal-content">
+                        <h3 id="mensaje-modal"></h3>
+                        <button onclick="cerrarModal()">Cerrar</button>
+                    </div>
+                </div>
+             
+            </section>
+        </main>
+    </div>
+    <div class="inc" >
+        <br>
+        <br>
+        <a class="Inicio" href="#Inicio">Ir al Inicio</a>
+    </div>
+    <footer>
+        <br>
+        <br>
+        <div>
+            <section class="pie">
+                <address>Madrid, España</address>
+                <small>&COPY;Derechos Reservados 2019</small>
+            </section>
+            <section class="pie1">
+                <p>Contacto:</p>        
+                <a href="mailto:portobellomadrid@yaraspain.com">Porto Bello Madrid</a>
+                <a href="tel:+34662631849">Teléfono</a>
+            </section>
+            <section class="pie2">
+                <p id="Redes">Síguenos en redes:</p>
+    
+                <img src="/static/IMG/6929237_instagram_icon.png" width="25px" height="25px">
+                <a target="_blank" href="https://www.instagram.com/heladeria_porto_bello_madrid/">Instagram</a>
+                <img src="/static/IMG/386622_facebook_icon.png" width="25px" height="25px">
+                <a target="_blank" href="https://www.facebook.com/portobellomadrid">Facebook</a>
+            </section>
+        </div>
+    </footer>
+    <script>
+    function toggleMenu() {
+        const menu = document.getElementById("menuprincipal");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+
+    /* Envío del formulario y apertura del modal */
+    document.getElementById("formulario-contacto").addEventListener("submit", async function(e) {
+        e.preventDefault(); // Evita recargar página
+    
+        const formData = new FormData(this);
+
+        try {
+        const response = await fetch("http://localhost:8000/enviar-formulario", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.text();
+        document.getElementById("mensaje-modal").innerHTML = data;
+        document.getElementById("modal").style.display = "flex";
+        
+        this.reset(); // Limpia el formulario
+
+        // 🔹 Cerrar modal automáticamente después de 3 segundos
+        setTimeout(() => {
+            cerrarModal();
+        }, 10000);
+
+        } catch (error) {
+        alert("Hubo un error al enviar el formulario");
+        }
+    });
+
+ /* Cierra el modal */
+    function cerrarModal() {
+         document.getElementById("modal").style.display = "none";
+     }   
+
+    </script>
+    
+</body>
+</html>

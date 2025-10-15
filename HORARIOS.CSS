@@ -1,0 +1,374 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+#Cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: antiquewhite;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/*
+header > figure > img {
+    padding-left: 600px;
+    padding-right: 600px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    */
+
+.logo > img {
+    padding: 0;
+    margin-right: 40px;
+    width: 150px;
+    height: 75px;
+}
+
+#Container {
+    flex-grow: 1;
+    background-color: antiquewhite;
+}
+
+#Container li:hover ul {
+    display: block;
+ }
+    
+
+/*el siguiente estilo es para colocar cada elemento de la lista uno al lado del otro,
+horizontalmente, en este caso se declaran los elementos <li> como elementos inline-block*/
+
+
+#Menuprincipal {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+/*el siguiente estilo es para los elementos del submenu, hay que declarar una posición absoluta,
+y para volver el submenu invisible hay que declarar la propiedad display con el valor none*/
+
+#Menuprincipal li a {
+    color: deeppink;
+    text-decoration: none;
+    white-space: nowrap; /* evita saltos de línea */
+    font-size: 16px;
+    font-weight: bold;  
+ }
+
+
+ #Menuprincipal a:hover {
+    color: whitesmoke;
+    transition: all 3.0ms ease;
+    cursor: pointer;
+ }
+
+/*el siguiente estilo para que los elementos principales del menu <li> se mantengan  organizados
+horizontalmente hay que declarar la posición relativa y display: inline-block*/
+
+#Menuprincipal > li  {
+    position: relative;
+    color: deeppink; 
+    padding: 10px 15px; 
+    margin-right: 5px; 
+    height: 40px;
+}
+
+#Menuprincipal > li:first-child > a {
+    background-image: url(../IMG/);
+
+ }
+
+#Menuprincipal > li:hover {
+    background-color: gray;
+    transition: 3.0ms;
+    cursor: pointer;
+ }
+
+#Menuprincipal li > ul {
+    display: none ;
+    position: absolute;
+    padding-top: 25px;
+    left: 0px;
+}
+
+
+#Menuprincipal li > ul > li {
+    font-size: 17px;
+    padding-top: 8px;
+    padding-left: 10px;
+    background-color: antiquewhite;
+}
+
+/*el siguiente estilo se aplica para cuando pasemos el raton por encima del menú se haga visible
+el submenu y para esto se utiliza le seudoclase :hover como se ve en el estilo aplicado, y
+declaramos la propiedad display con el valor block, de esta manera el submenu se muestra en la pantalla*/
+
+#Menuprincipal li:hover ul {
+    display: block;
+}
+
+#Menuprincipal li a:hover {
+    background-color: gray;
+    color: whitesmoke;
+    padding-bottom: 38px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#Menuprincipal li > ul > li:hover {
+    background-color: gray;
+    color: whitesmoke;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.galeria {
+    padding-left: 180px;
+    padding-top: 100px;
+}
+
+.galeria img {
+    background-color: gray;
+    box-shadow: gray 10px 10px 10px 20px;
+}
+
+div > h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: deeppink;
+}
+
+div > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: deeppink;
+}
+
+.contacto >  h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: deeppink;
+}
+
+.contacto > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: deeppink;
+}
+
+.contacto > a:hover {
+    color: darkslategray;
+    transition: all 3.0s ease;
+    cursor: pointer;
+}
+
+.contacto > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: deeppink;
+}
+
+.consulta > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: deeppink;
+}
+
+.informacion {
+    padding-left: 180px;
+    background-color: antiquewhite;
+}
+
+#inicio {
+    background-color: antiquewhite;
+}
+
+.inicio {
+    color: deeppink;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    padding-left: 650px;
+}
+
+.inicio:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+footer {
+    width: 96%;
+    padding: 2%;
+    background-color: gray;
+}
+
+.pie {
+    float: left;
+    width: 270px;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.pie1 {
+    float: left;
+    width: 270px;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.pie1 a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 8px;
+} 
+
+.pie1 a:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.pie2 p {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pie2 a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 8px;
+}
+
+.pie2 a:hover {
+    color: darkslategray;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+footer > div {
+    width: 960px;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+main {
+    background-color: antiquewhite;
+}
+
+/*hacer página responsive*/
+/* HAMBURGUESA: solo se muestra en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+}
+
+
+/* ESTILOS RESPONSIVE */
+@media (max-width: 768px) {
+    #Cabecera {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    
+
+    .menu-toggle {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 26px;
+        color: deeppink;
+        cursor: pointer;
+        margin-bottom: 10px;
+        
+    }
+
+    #Container {
+         display: none;
+        flex-direction: column;
+         width: 100%;
+         background-color: antiquewhite;
+        position: absolute;
+         top: 100%;
+         left: 0;
+         z-index: 1000;
+    }
+
+    #Container.active {
+        display: flex;
+    }
+
+    #Menuprincipal {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #Menuprincipal > li {
+        width: 100%;
+        text-align: center;
+        /*padding: 10px 0;*/
+    }
+
+    #Menuprincipal li > ul {
+        position: static;
+        padding-top: 0;
+    }
+
+    .galeria {
+        padding: 20px;
+    }
+
+    .galeria iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .informacion {
+        padding: 20px;
+        
+    }
+
+    .inicio {
+        padding-left: 0;
+        text-align: center;
+        display: block;
+    }
+
+    footer > div {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pie, .pie1, .pie2 {
+        width: 100%;
+        text-align: center;
+        float: none;
+        padding: 10px 0;
+    }
+}
